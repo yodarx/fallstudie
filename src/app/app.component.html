@@ -9,8 +9,7 @@
             <th class="text-center">Project Name</th>
             <th class="text-center">Vorgehensmodell</th>
             <th class="text-center">Aktivitäten</th>
-
-            <th class="text-center">&nbsp;</th>
+            <th class="text-center">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -88,19 +87,23 @@
         <form *ngIf="editprojectForm">
           <h2>Edit project Details</h2>
           <p>
-            First Name:
+            Project Name
+            <input type="text" name="name" [(ngModel)]="editedproject.name" />
+          </p>
+          <p>
+            Vorgehensmodell:
             <input
               type="text"
-              name="name"
-              [(ngModel)]="editedproject.firstName"
+              name="vorgehensmodell"
+              [(ngModel)]="editedproject.vorgehensart"
             />
           </p>
           <p>
-            Last Name:
+            Activities:
             <input
               type="text"
-              name="lastName"
-              [(ngModel)]="editedproject.lastName"
+              name="activities"
+              [(ngModel)]="editedproject.activities"
             />
           </p>
           <p>
